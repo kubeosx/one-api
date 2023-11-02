@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: OneApi
+namespace: staging
+bases:
+  - ../../base
+commonAnnotations:
+  app: OneApi
+  backstage.io/kubernetes-id: "OneApi"
+commonLabels:
+  app: OneApi
+  backstage.io/kubernetes-id: "OneApi"
+patchesStrategicMerge:
+  - configmap_patch.yaml
+  - deployment_patch.yaml

@@ -1,0 +1,8 @@
+site_name: "OneApi"
+site_description: "OneApi"
+
+nav:
+  - Introduction: index.md
+
+plugins:
+  - techdocs-core
